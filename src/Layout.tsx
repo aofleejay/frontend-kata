@@ -6,15 +6,14 @@ const Layout: React.FC = ({ children }) => (
     <nav className="bg-gray-800 text-gray-200 h-screen p-6">
       <ul>
         <li className="p-1">
-          <Link to="/" className="uppercase font-bold">
-            home
+          <Link to="/" className="uppercase font-bold text-green-400">
+            frontend kata
           </Link>
         </li>
         <li className="p-1">
-          <Link to="/kata-1">Kata-1</Link>
-        </li>
-        <li className="p-1">
-          <Link to="/kata-1">Kata-2</Link>
+          <Link to="/dribble-clone" className="capitalize">
+            dribble clone
+          </Link>
         </li>
       </ul>
     </nav>

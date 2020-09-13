@@ -1,16 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './assets/styles/tailwind.build.css' // FIXME: Remove unused css to reduce file size.
 import './index.css'
 import Layout from './Layout'
+import Dribble from './dribble-clone'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Layout>
-        <Switch>{/* TODO: Kata practice's routes here. */}</Switch>
+        <Switch>
+          <Route path="/">
+            <p className="capitalize text-center mt-8">
+              select project on sidebar.
+            </p>
+          </Route>
+          <Route path="/dribble-clone">
+            <Dribble />
+          </Route>
+        </Switch>
       </Layout>
     </Router>
   </React.StrictMode>,
