@@ -1,6 +1,6 @@
-# UI Kata
+# Frontend Kata
 
-My UI kata practice using React and Tailwindcss.
+My frontend kata practice using React and Tailwindcss.
 
 ## Getting Started
 
