@@ -12,7 +12,7 @@ ReactDOM.render(
     <Router>
       <Layout>
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <p className="capitalize text-center mt-8">
               select project on sidebar.
             </p>
