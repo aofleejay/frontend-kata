@@ -3,25 +3,21 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './assets/styles/tailwind.build.css' // FIXME: Remove unused css to reduce file size.
 import './index.css'
-import Layout from './Layout'
 import Dribble from './dribble-clone'
 import * as serviceWorker from './serviceWorker'
+import Home from './Home'
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Layout>
-        <Switch>
-          <Route exact path="/">
-            <p className="capitalize text-center mt-8">
-              select project on sidebar.
-            </p>
-          </Route>
-          <Route path="/dribble-clone">
-            <Dribble />
-          </Route>
-        </Switch>
-      </Layout>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/dribble-clone">
+          <Dribble />
+        </Route>
+      </Switch>
     </Router>
   </React.StrictMode>,
   document.getElementById('root'),
