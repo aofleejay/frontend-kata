@@ -1,6 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+const ListItem: React.FC = ({ children }) => {
+  return (
+    <li className="text-indigo-400 hover:text-indigo-600 transition-colors duration-200 ease-in underline">
+      {children}
+    </li>
+  )
+}
+
 const Home: React.FC = () => {
   return (
     <div className="text-center pt-8 bg-gray-100 w-screen h-screen">
@@ -15,15 +23,29 @@ const Home: React.FC = () => {
           rel="noopener noreferrer"
           className="font-semibold"
         >
-          view source
+          view source code on GitHub
         </a>
         )
       </p>
-      <ul className="mt-8">
-        <li className="text-indigo-400 hover:text-indigo-600 transition-colors duration-200 ease-in underline">
+      <ol className="mt-8 max-w-xl mx-auto list-disc list-inside">
+        <ListItem>
           <Link to="/dribble-clone">Dribble's homepage clone</Link>
-        </li>
-      </ul>
+        </ListItem>
+        <ListItem>
+          <Link to="/social-proof-section-challenge">
+            Social proof section challenge
+          </Link>{' '}
+          (
+          <a
+            href="https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View challenge
+          </a>
+          )
+        </ListItem>
+      </ol>
     </div>
   )
 }

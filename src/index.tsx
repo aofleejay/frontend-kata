@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './assets/styles/tailwind.build.css' // FIXME: Remove unused css to reduce file size.
 import './index.css'
-import Dribble from './dribble-clone'
 import * as serviceWorker from './serviceWorker'
 import Home from './Home'
+import Dribble from './dribble-clone'
+import SocialProofSection from './social-proof-section-challenge'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,9 @@ ReactDOM.render(
         </Route>
         <Route path="/dribble-clone">
           <Dribble />
+        </Route>
+        <Route path="/social-proof-section-challenge">
+          <SocialProofSection />
         </Route>
       </Switch>
     </Router>
