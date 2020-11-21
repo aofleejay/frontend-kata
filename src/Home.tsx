@@ -1,9 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const ListItem: React.FC = ({ children }) => {
+const ListItem: React.FC<{ className?: string }> = ({
+  children,
+  className,
+}) => {
   return (
-    <li className="text-indigo-400 hover:text-indigo-600 transition-colors duration-200 ease-in underline">
+    <li
+      className={`text-indigo-400 hover:text-indigo-600 transition-colors duration-200 ease-in underline ${className}`}
+    >
       {children}
     </li>
   )
@@ -44,6 +49,9 @@ const Home: React.FC = () => {
             View challenge
           </a>
           )
+        </ListItem>
+        <ListItem className="mt-4">
+          <Link to="/animation-kata">Animation kata</Link>
         </ListItem>
       </ol>
     </div>

@@ -7,6 +7,7 @@ import * as serviceWorker from './serviceWorker'
 import Home from './Home'
 import Dribble from './dribble-clone'
 import SocialProofSection from './social-proof-section-challenge'
+import AnimationGallery from './animation-gallery'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,6 +21,9 @@ ReactDOM.render(
         </Route>
         <Route path="/social-proof-section-challenge">
           <SocialProofSection />
+        </Route>
+        <Route path="/animation-kata">
+          <AnimationGallery />
         </Route>
       </Switch>
     </Router>
