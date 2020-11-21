@@ -1,7 +1,11 @@
 import React from 'react'
 import DotLoading from './DotLoading'
+import FlipButton from './FlipButton'
 
-const componentList = [{ title: 'Dot Loading', name: DotLoading }]
+const componentList = [
+  { title: 'Dot Loading', name: DotLoading },
+  { title: 'Flip Button', name: FlipButton },
+]
 
 function AnimationGallery() {
   return (
@@ -9,7 +13,10 @@ function AnimationGallery() {
       <div className="container mx-auto">
         <div className="grid grid-cols-6 gap-4 p-8">
           {componentList.map((component) => (
-            <div className="p-8 shadow-lg rounded text-center cursor-pointer bg-white">
+            <div
+              key={component.title}
+              className="p-8 shadow-lg rounded text-center cursor-pointer bg-white"
+            >
               <p className="text-lg font-semibold mb-4">{component.title}</p>
               <component.name />
             </div>
