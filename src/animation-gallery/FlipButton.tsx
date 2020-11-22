@@ -8,7 +8,11 @@ const Button: React.FC<{ style?: React.CSSProperties }> = ({
   return (
     <div
       className="absolute w-full h-full flex justify-center items-center text-white"
-      style={{ backfaceVisibility: 'hidden', ...style }}
+      style={{
+        WebkitBackfaceVisibility: 'hidden',
+        backfaceVisibility: 'hidden',
+        ...style,
+      }}
     >
       {children}
     </div>
@@ -24,8 +28,9 @@ function FlipButton() {
         className="relative rounded-full bg-green-400 w-24 h-10 transition-transform duration-500"
         onClick={() => setIsDone(!isDone)}
         style={{
+          WebkitTransformStyle: 'preserve-3d',
           transformStyle: 'preserve-3d',
-          transform: isDone ? 'rotateX(180deg)' : 'none',
+          transform: isDone ? 'rotateX(179deg)' : 'none',
         }}
       >
         <Button>SEND</Button>
