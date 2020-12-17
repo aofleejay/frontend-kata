@@ -7,7 +7,7 @@ const ListItem: React.FC<{ className?: string }> = ({
 }) => {
   return (
     <li
-      className={`text-green-400 hover:text-green-600 transition-colors duration-200 ease-in underline ${className}`}
+      className={`text-green-500 hover:text-green-600 font-semibold transition-colors duration-200 ease-in underline ${className}`}
     >
       {children}
     </li>
