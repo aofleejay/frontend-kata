@@ -13,7 +13,7 @@ function AnimationGallery() {
   return (
     <div className="min-h-screen bg-green-200 bg-gradient-to-b from-green-100">
       <div className="container mx-auto">
-        <div className="grid grid-cols-6 gap-4 p-8">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-4 p-8">
           {componentList.map((component) => (
             <div
               key={component.title}
