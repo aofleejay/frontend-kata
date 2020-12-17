@@ -1,10 +1,12 @@
 import React from 'react'
 import DotLoading from './DotLoading'
 import FlipButton from './FlipButton'
+import ShootingStar from './ShootingStar'
 
 const componentList = [
   { title: 'Dot Loading', name: DotLoading },
   { title: 'Flip Button', name: FlipButton },
+  { title: 'Shooting Star', name: ShootingStar },
 ]
 
 function AnimationGallery() {
@@ -15,7 +17,7 @@ function AnimationGallery() {
           {componentList.map((component) => (
             <div
               key={component.title}
-              className="p-8 shadow-lg rounded text-center cursor-pointer bg-white"
+              className="p-8 shadow-lg rounded-md text-center cursor-pointer bg-white"
             >
               <p className="text-lg font-semibold mb-4">{component.title}</p>
               <component.name />

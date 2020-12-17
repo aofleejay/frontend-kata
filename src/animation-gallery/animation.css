@@ -16,6 +16,28 @@
   animation-delay: 0.4s;
 }
 
-.flip {
-  transform: rotateX(179deg);
+@keyframes shooting-star {
+  100% {
+    transform: translateX(100px);
+    opacity: 0;
+    width: 15px;
+  }
+}
+
+.shooting-star {
+  height: 4px;
+  width: 40px;
+  border-radius: 2px;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0), white);
+  opacity: 0.8;
+  animation: shooting-star infinite 2s ease-out;
+  transform-origin: 0;
+}
+
+.star-2 {
+  animation-delay: 1s;
+}
+
+.star-3 {
+  animation-delay: 700ms;
 }
