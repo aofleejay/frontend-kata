@@ -2,12 +2,14 @@ import React from 'react'
 import AddImage from './AddImage'
 import DotLoading from './DotLoading'
 import FlipButton from './FlipButton'
+import Pacman from './Pacman'
 import ShootingStar from './ShootingStar'
 
 const componentList = [
   { title: 'Add Image', name: AddImage },
   { title: 'Dot Loading', name: DotLoading },
   { title: 'Flip Button', name: FlipButton },
+  { title: 'Pacman', name: Pacman },
   { title: 'Shooting Star', name: ShootingStar },
 ]
 

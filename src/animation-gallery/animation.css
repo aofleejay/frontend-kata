@@ -66,3 +66,43 @@
   opacity: 1;
   transform: scale(0.8);
 }
+
+@keyframes pacman-mouth-top {
+  to {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes pacman-mouth-bottom {
+  to {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes pacman-food {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+.pacman .mouth-top {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  transform-origin: center bottom;
+  animation: pacman-mouth-top infinite 300ms alternate;
+}
+
+.pacman .mouth-bottom {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  transform-origin: center top;
+  animation: pacman-mouth-bottom infinite 300ms alternate;
+}
+
+.pacman .food {
+  animation: pacman-food infinite 1s;
+}
