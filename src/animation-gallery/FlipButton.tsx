@@ -7,7 +7,7 @@ const Button: React.FC<{ style?: React.CSSProperties }> = ({
 }) => {
   return (
     <div
-      className="absolute w-full h-full flex justify-center items-center text-white"
+      className="absolute w-full h-full flex justify-center items-center text-white cursor-pointer"
       style={{
         WebkitBackfaceVisibility: 'hidden',
         backfaceVisibility: 'hidden',
